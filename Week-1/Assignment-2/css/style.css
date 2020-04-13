@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+header{
+    background-color:#eaeaea;
+    padding: 1em;
+}
+.banner{
+    background-color: #4d5d6c;
+    padding: 2em;
+    color: white;
+}
+.item{
+    background-color:  #cecece;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+}
+header ul{
+    padding: 0;
+}
+header li{
+    list-style-type: none;
+}
+
+.title{
+    font-size: larger;
+}
+button{
+    padding: 1em;
+    background-color: #96a8b2;
+    border-radius: 0.5em;
+    border: none;
+}
