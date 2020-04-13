@@ -1,0 +1,16 @@
+/* width < 600 */
+
+
+@media (min-width:600px){
+    /* Two column */
+}
+@media (min-width:840px){
+
+}
+@media(min-width:872px){
+
+}
+
+@media(min-width: 1520px){
+    /* body Max width : 1520 */
+}
