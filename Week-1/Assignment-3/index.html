@@ -1,127 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Developers</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body> 
     <header> 
-        <div class="sticky-header">
-            <nav class="mobile-nav">
-                <button class="material-icons">menu</button>
-            </nav>
-            <div>
-                <img src="img/lockup-developers.svg">
-            </div>
-            <div>
-                <nav class="main-nav">
-                    <div class="tab">
-                        <a>Products</a>
-                        <a>Dropdown Arrow</a>
-                        <div calss="dropdown-content">
-                            <div class="dropdown-col">
-                                <ul>
-                                    <li>Develop</li>
-                                    <li><a>Android</a></li>
-                                    <li><a>ACloud Platform</a></li>
-                                    <li><a>AFierbase</a></li>
-                                    <li><a>AFlutter</a></li>
-                                    <li><a>AGoogle Assistant</a></li>
-                                    <li><a>AMaps Platform</a></li>
-                                    <li><a>ATensorFlow</a></li>
-                                    <li><a>AWeb</a></li>
-                                    <li><a>AYouTube</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-col">
-                                <ul>
-                                    <li>Grow</li>
-                                    <li><a>Firebase</a></li>
-                                    <li><a>Google Ads</a></li>
-                                    <li><a>Google Analytics</a></li>
-                                    <li><a>Google Pay</a></li>
-                                    <li><a>Serch</a></li>
-                                    <li><a>Web Push and Notification APIs</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-col">
-                                <ul>
-                                    <li>Earn</li>
-                                    <li><a>AdMob</a></li>
-                                    <li><a>Google Ads API</a></li>
-                                    <li><a>Google Pay</a></li>
-                                    <li><a>Google Play Billing</a></li>
-                                    <li><a>Interactive Media Ads</a></li>
-                                </ul>     
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab">
-                        <a>Events</a>
-                    </div>
-                    <div class="tab">
-                        <a>Developer Communities</a>
-                        <a>Dropdown Arrow</a>
-                        <div class="dropdown-content">
-                            <div class="dropdown-col">
-                                <ul>
-                                    <li><a>Google Developer Groups</a></li>
-                                    <li><a>Developer Student Clubs</a></li>
-                                    <li><a>Google Business Groupss</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-col">
-                                <ul>
-                                    <li><a>Google Developers Experts</a></li>
-                                    <li><a>Women Techmakers</a></li>
-                                    <li><a>Accelerators</a></li>
-                                </ul>
+        <div class="main-header">
+            <div class="wrapper header-row">
+                <label class="material-icons" id="hamburger-menu-btn" for="hamburger-menu-checkbox">menu</label>
+                <input type="checkbox" id="hamburger-menu-checkbox">
+                <div class="logo-wrapper">
+                    <a><img src="img/lockup-developers.svg"></a>
+                </div>
+                <div class="nav-wrapper">
+                    <nav class="main-nav">
+                        <div class="tab">
+                            <a>Products</a>
+                            <a>Dropdown Arrow</a>
+                            <div calss="dropdown-content">
+                                <div class="dropdown-col">
+                                    <ul>
+                                        <li>Develop</li>
+                                        <li><a>Android</a></li>
+                                        <li><a>ACloud Platform</a></li>
+                                        <li><a>AFierbase</a></li>
+                                        <li><a>AFlutter</a></li>
+                                        <li><a>AGoogle Assistant</a></li>
+                                        <li><a>AMaps Platform</a></li>
+                                        <li><a>ATensorFlow</a></li>
+                                        <li><a>AWeb</a></li>
+                                        <li><a>AYouTube</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-col">
+                                    <ul>
+                                        <li>Grow</li>
+                                        <li><a>Firebase</a></li>
+                                        <li><a>Google Ads</a></li>
+                                        <li><a>Google Analytics</a></li>
+                                        <li><a>Google Pay</a></li>
+                                        <li><a>Serch</a></li>
+                                        <li><a>Web Push and Notification APIs</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-col">
+                                    <ul>
+                                        <li>Earn</li>
+                                        <li><a>AdMob</a></li>
+                                        <li><a>Google Ads API</a></li>
+                                        <li><a>Google Pay</a></li>
+                                        <li><a>Google Play Billing</a></li>
+                                        <li><a>Interactive Media Ads</a></li>
+                                    </ul>     
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab">
-                        <a>Blog</a>
-                    </div>
-                    <div class="tab">
-                        <a>More</a>
-                        <a>Dropdown Arrow</a>
-                        <div class="dropdown-content">
-                            <div class="dropdown-col">
-                                <ul>
-                                    <li><a>Products</a></li>
-                                    <li><a>Events</a></li>
-                                    <li><a>Developer Communities</a></li>
-                                    <li><a>Blogs</a></li>
-                                </ul>
+                        <div class="tab">
+                            <a>Events</a>
+                        </div>
+                        <div class="tab">
+                            <a>Developer Communities</a>
+                            <a>Dropdown Arrow</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-col">
+                                    <ul>
+                                        <li><a>Google Developer Groups</a></li>
+                                        <li><a>Developer Student Clubs</a></li>
+                                        <li><a>Google Business Groupss</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-col">
+                                    <ul>
+                                        <li><a>Google Developers Experts</a></li>
+                                        <li><a>Women Techmakers</a></li>
+                                        <li><a>Accelerators</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </nav>
+                        <div class="tab">
+                            <a>Blog</a>
+                        </div>
+                        <div class="tab">
+                            <a>More</a>
+                            <a>Dropdown Arrow</a>
+                            <div class="dropdown-content">
+                                <div class="dropdown-col">
+                                    <ul>
+                                        <li><a>Products</a></li>
+                                        <li><a>Events</a></li>
+                                        <li><a>Developer Communities</a></li>
+                                        <li><a>Blogs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="search-field-wrapper main-header-search">
+                    <input placeholder="Search"> <!--Appear at Event Section -->
+                </div>
+                <div class="landuage-dropdown-wrapper">
+                    <div>Language dropdown</div>
+                </div>
+                <div class="user-avatar-wrapper"></div>
             </div>
-            <div>
-                <input placeholder="Search"> <!--Appear at Event Section -->
+        </div>
+        <div class="sub-header">    
+            <div class="banner">
+                <h1>Build <strong>anything</strong> with Google</h1>
             </div>
-            <div>
-                <div>Language dropdown</div>
+            <div class="banner-search-field-wrapper">
+                <div class="search-field-wrapper">
+                    <input placeholder="Search" type="text">
+                </div>
             </div>
-            <div>
-                <img alt="User Avatar">
-            </div>
-        </div>    
-        <div>
-            <h1>Build <strong>anything</strong> with Google</h1>
-            <input placeholder="Search">
         </div>
     </header>
     <main>
-        <section>
-            <h2>Events</h2>
-            <a>View all</a>
-            <div class="row">
+        <section id="event-section">
+            <div class="row-header row-wrapper">
+                <h2>Events</h2>
+                <a>View all</a>
+            </div>
+            <div class="row row-wrapper">
                 <div class="item">
-                    <img src="img/google_for_games_summit_1440.png">
-                    <div class="description">
+                    <a class="item-img">
+                        <img src="img/google_for_games_summit_1440.png">
+                    </a>
+                    <div class="item-description">
                         <h3>Google for Games Developer Summit March 23 | Livestream</h3>
                         <p>Announcing the Google for Games Developer Summit on March 23. Tune in to our keynote at 9AM PT. Every year, we look forward to sharing the latest gaming announcements at GDC to help developers make awesome games. This year, we’re bringing these sessions online.</p>
                         <p><a>#GoogleforGame</a></p>
@@ -132,9 +147,9 @@
         </section>
         <section>
             <h2>News</h2>
-            <div class="row">
+            <div class="row row-wrapper">
                 <div class="item">
-                    <img src="img/devfest_on_demand_1440.png">
+                    <a><img src="img/devfest_on_demand_1440.png"></a>
                     <div class="description">
                         <h3>DevFest on demand</h3>
                         <p>Now streaming online - talks from DevFest 2019! Watch sessions featuring local developers in the Google Developer Groups community from all over the world. Topics include Cloud, Web, Machine Learning, Mobile, and more!</p>
