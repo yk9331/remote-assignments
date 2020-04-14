@@ -7,69 +7,112 @@ body{
     text-align: center;
 }
 
-header{
-    background-color:#eaeaea;
+a{
+    color: black;
+    text-decoration: none;
 }
 
 .wrapper{
     margin: 0 1em;
 }
 
-.banner{
-    background-color: #4d5d6c;
-    padding: 2em;
-    color: white;
+header{
+    background-color:#eaeaea;
+    padding: 0.5em 0;
 }
 
-.header-container,
+.title {
+    text-align: left;
+    font-size: larger;
+    margin-right: auto; 
+}
+
+#dropdown-checkbox{
+    display: none;
+}
+
+#dropdown-checkbox:checked ~ nav ul {
+    display: block;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 0;
+  }
+
+.dropdown-btn {
+    position: absolute;
+    top:1em;
+    right: 1em;
+    background: url('../img/menu-icon.svg') no-repeat center;
+    display: block;
+    margin-left: 1em;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+nav ul{
+   display: none;
+   padding: 0;
+}
+
+li{
+    margin: 0;
+    list-style-type: none; 
+    padding: 0.5em 0; 
+}
+
+.banner{
+    position: relative;
+    background: url(../img/nuit-blanche-in-taipei.jpg) center #4d5d6c;
+    padding: 2em;
+    color: white;
+    height: 300px;
+    
+}
+
+.banner h1{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin: 0 0.5em; 
+}
+
 .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.container{
-    flex-direction: column;
-}
 
-header a{
-    color: black;
-    text-decoration: none;
-}
-
-.title{
-    font-size: larger;
-    margin-right: auto; 
-}
-
-.dropdown{
-    display: flex;
-}
-
-.dropdown-btn{
-    background: none;
-    background: url('../img/menu-icon.svg') no-repeat center;
-    border: none;
-    padding: 16px;
-    cursor: pointer;
-}
-
-.dropdown-content{
-    display: none;
-}
-
-.dropdown-content li{
-    list-style-type: none; 
-    padding: 0 1em;
+.col{
+    flex: 100%;
 }
 
 .item{
+    position: relative;
+    padding: 0.3em;
+    height: auto;
+}
+
+.item-title{
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    opacity: 0;
+}
+
+.item-img{
     background-color:  #cecece;
-    padding: .5em;
-    margin: .5em;
     border-radius: 0.5em;
-    height: 300px;
-    min-width: 40%;
-    flex-grow: 1;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.item:hover .item-title{
+    opacity: 1;
 }
 
 .back-btn{
@@ -81,20 +124,35 @@ header a{
 }
 
 @media (min-width: 500px){
-    .container{
-        flex-direction: row;
-    }
+    .col{
+        flex: 50%;
+    }  
 }
 
 @media (min-width:800px){
     .wrapper{
         margin: 0 2em;
     }
+
+    nav ul,
+    .header-container{
+        display: flex;
+    }
+
     .dropdown-btn{
         display: none;
     }
-    .dropdown-content{
-        display: inline-flex;
+    
+    .dropdown-content li{
+        padding: 0 1em;
+    }
+
+    .item{
+        padding: 0.5em;
+    }
+
+    .item-img{
+        border-radius: 1em;
     }
 }
 
@@ -102,6 +160,9 @@ header a{
     .wrapper{
         width: 1200px;
         margin: 0 auto;
+    }
+    .item{
+        padding: 1em;
     }
 }
 
