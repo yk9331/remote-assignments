@@ -5,7 +5,7 @@
 
 body{
     color:#202124;
-    font-family: "Google Sans","";
+    font-family: "Google Sans";
     font: 400 16px/24px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
     -webkit-font-smoothing: antialiased;
     text-size-adjust: 100%;
@@ -46,9 +46,13 @@ a{
     color:#1a73e8;
     cursor: pointer;
 }
-header a,
+
 footer a{
     color: #202124;
+}
+
+header a{
+    color: #5f6368;
 }
 
 img{
@@ -119,12 +123,8 @@ footer ul{
     left: 6px;
 }
 
-.youtube-wrapper{
-    display: block;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    width: 100%;
+.language-selector-wrapper{
+    margin: 0 0 0 16px;
 }
 
 .main-header{
@@ -154,8 +154,9 @@ footer ul{
 #hamburger-menu-checkbox{
     display: none;
 }
+
 #hamburger-menu-btn {
-    display: block;
+    display: none;
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -166,20 +167,45 @@ footer ul{
     flex:0 1 auto;
 }
 
-header .logo-wrapper{
-    margin-right: auto;
-}
-
 .nav-wrapper{
     margin-left: 48px;
+    margin-right: auto;  
+}
+
+.main-nav{
+    display: flex;
+    align-items: center;
+}
+
+.tab {
+    font: 500 14px/20px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+    
+    display: flex;
+    align-items: center;
+}
+
+.tab a{
+    padding: 0 18px;
+}
+
+.tab .dropdown-tab{
+    padding-right: 0;
+}
+
+.tab .dropdown-arrow{
+    padding-left: 0;
+    padding-right: 12px;
+}
+
+.nav-wrapper .dropdown-content{
     display: none;
 }
 
-.main-header .search-field-wrapper{
+header .search-field-wrapper{
     display: none;
 }
 
-.landuage-dropdown-wrapper{
+header .language-selector-wrapper{
     display: none;
 }
 
@@ -244,6 +270,7 @@ header .logo-wrapper{
     margin: 0;
     flex: 1 1 auto;
 }
+
 .row-header a{
     flex: 0 1 auto;
 }
@@ -253,7 +280,8 @@ header .logo-wrapper{
     margin-top: 32px;
     padding: 0 40px;
 }
-.row:not(:first-child){
+
+.row:not(:first-of-type){
     margin-top: 40px;
 }
 
@@ -261,6 +289,7 @@ header .logo-wrapper{
 .row p:first-of-type{
     margin-top: 0;
 }
+
 .row p:last-of-type{
     margin-bottom: 0;
 }
@@ -292,6 +321,14 @@ header .logo-wrapper{
     flex: 0 0 calc((100% - 24px) / 2);
 }
 
+.youtube-wrapper{
+    display: block;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+}
+
 .item .item-description{
     margin: 0 0 0 40px;
     flex: 0 1 calc((100% - 20px) * 2 / 3);
@@ -310,13 +347,11 @@ header .logo-wrapper{
     margin: auto 0 -8px -12px;
     padding-top: 8px;
 }
+
 .card .item-description-button-wrapper{
     margin: auto 0 -8px -12px;
     padding-top: 16px;
 }
-.
-
-
 
 .footer-linkbox{
     border-bottom: 1px solid #dadce0;
@@ -325,8 +360,8 @@ header .logo-wrapper{
 
 .footer-nav{
     display: flex;
-
 }
+
 .footer-nav .nav-col{
     flex: 1;
     margin: 24px 0;
@@ -354,7 +389,7 @@ header .logo-wrapper{
 
 .footer-site{
     border-bottom: 1px solid #dadce0;
-    border-top: 1px solid #dadce0;
+    border-top: none;
     padding: 24px 0 23px;
     display: flex;
 }
@@ -365,7 +400,7 @@ header .logo-wrapper{
 }
 
 .footer-site li{
-    margin-left: 40px;
+    margin: 0 0 0 40px;
 }
 
 .footer-link{
@@ -380,6 +415,7 @@ header .logo-wrapper{
     flex:1;
     align-items: center;
 }
+
 .footer-link li,
 .footer-link li .bar{
     margin-right: 8px;
@@ -392,29 +428,48 @@ header .logo-wrapper{
     margin-left: auto;
     padding-left: 16px;
 }
+
 .footer-button-wrapper{
     margin: -4px -4px -4px 4px;
 }
-.language-selector{
-    margin: 0 0 0 16px;
-}
 
 
-@media (min-width:350px){
+
+
+@media (max-width:350px){
     
 }
 
-@media (min-width:600px){
+@media (max-width:600px){
     /* Two column */
     #hamburger-menu-btn{
         display: none;
     }
 
-}
-@media (min-width:840px){
 
 }
-@media(min-width:872px){
+@media (max-width:840px){
+    header .logo-wrapper{
+        margin-right: auto;
+    }
+
+    .nav-wrapper{
+        display: none;
+    }
+
+    .footer-site .logo-wrapper{
+        margin-bottom: 16px;
+    }
+
+    .footer-site{
+        display: block;
+    }
+
+    .footer-site li{
+        margin: 0 40px 0 0;
+    }
+}
+@media(max-width:872px){
 
 }
 
