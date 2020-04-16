@@ -12,6 +12,12 @@ body{
     
 }
 
+footer{
+    border-top: 1px solid #dadce0;
+    font: 14px/20px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+    padding: 0 24px;
+}
+
 h1{
     font: 400 44px/52px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
     letter-spacing: -0.5px;
@@ -40,6 +46,10 @@ a{
     color:#1a73e8;
     cursor: pointer;
 }
+header a,
+footer a{
+    color: #202124;
+}
 
 img{
     width:100%;
@@ -54,6 +64,13 @@ iframe {
     position: absolute;
     top: -0.5%;
     width: 101%;
+}
+
+header ul,
+footer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .button{
@@ -79,8 +96,6 @@ iframe {
     margin: 4px 4px 4px 12px;
     padding: 0 24px; 
 }
-
-
 
 .search-field-wrapper{
     position: relative;
@@ -113,10 +128,17 @@ iframe {
 }
 
 .main-header{
+    background-color: #fff;
+    z-index: 100;
+    position: fixed;
+    top: 0;
     height: 48px;
     width: 100%;
     border-bottom: 1px solid #bdc1c6;
+}
 
+.main-header + .content{
+    padding-top: 48px;
 }
 
 .wrapper{
@@ -141,9 +163,13 @@ iframe {
 
 .logo-wrapper{
     width: 185px;
-    margin-right: auto;
     flex:0 1 auto;
 }
+
+header .logo-wrapper{
+    margin-right: auto;
+}
+
 .nav-wrapper{
     margin-left: 48px;
     display: none;
@@ -287,6 +313,90 @@ iframe {
 .card .item-description-button-wrapper{
     margin: auto 0 -8px -12px;
     padding-top: 16px;
+}
+.
+
+
+
+.footer-linkbox{
+    border-bottom: 1px solid #dadce0;
+    font: 400 14px/16px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+}
+
+.footer-nav{
+    display: flex;
+
+}
+.footer-nav .nav-col{
+    flex: 1;
+    margin: 24px 0;
+}
+
+.footer-nav .nav-col:not(:first-child){
+    margin-left: 24px;
+}
+
+.footer-nav h3{
+    display: block;
+    font: 400 16px/26px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+    margin: 1px 0 4px;
+}
+
+.footer-nav a,
+.footer-site ul a{
+    display: block;
+    padding: 8px 0;
+}
+
+.footer-nav a:hover{
+    color:#1a73e8;
+}
+
+.footer-site{
+    border-bottom: 1px solid #dadce0;
+    border-top: 1px solid #dadce0;
+    padding: 24px 0 23px;
+    display: flex;
+}
+
+.footer-site ul{
+    display: flex;
+    align-items: center;
+}
+
+.footer-site li{
+    margin-left: 40px;
+}
+
+.footer-link{
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.footer-link ul{
+    display: flex;
+    flex:1;
+    align-items: center;
+}
+.footer-link li,
+.footer-link li .bar{
+    margin-right: 8px;
+}
+
+.footer-utility-button {
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    margin-left: auto;
+    padding-left: 16px;
+}
+.footer-button-wrapper{
+    margin: -4px -4px -4px 4px;
+}
+.language-selector{
+    margin: 0 0 0 16px;
 }
 
 
