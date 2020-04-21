@@ -28,8 +28,18 @@ a{
 }
 
 header{
+    z-index: 9;
     background-color:#eaeaea;
     padding: 0.5em 0;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header + .content{
+    padding-top: 60px;
 }
 
 .title {
@@ -49,12 +59,10 @@ header{
     height: 32px; 
 }
 
-
-
 #main-nav{
     display: none;
     z-index: 5;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color:rgba(255,255,255,.95);
