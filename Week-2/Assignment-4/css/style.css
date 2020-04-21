@@ -27,50 +27,60 @@ header{
     margin-right: auto; 
 }
 
-#dropdown-checkbox{
-    display: none;
-}
-
-#dropdown-checkbox:checked ~ nav ul {
-    display: block;
-    flex-direction: column;
-    text-align: left;
-    margin-left: 0;
-  }
-
-.dropdown-btn {
+#menu-btn {
+    z-index: 10;
     position: absolute;
-    top:1em;
+    top: 0.65em;
     right: 1em;
-    background: url('../img/menu-icon.svg') no-repeat center;
     display: block;
     margin-left: 1em;
+    padding: 0;
+    border: none;
+    background: none;
     width: 32px;
     height: 32px;
     cursor: pointer;
 }
 
-nav ul{
-   display: none;
-   padding: 0;
+#menu-btn:focus{
+    outline: none;
+    border: 1px rgba(0,0,0,.5) solid;
 }
 
-li{
+
+#main-nav{
+    display: none;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:rgba(255,255,255,.95);
+    min-width: 200px;
+    width: 40%;
+    height: 100%;
+}
+
+.menu-list{
+    padding: 0;
+    margin-top: 60px;
+    flex: 1;
+}
+
+.menu-list li{
     margin: 0;
     list-style-type: none; 
     padding: 0.5em 0; 
 }
 
-.banner{
+#banner{
     position: relative;
     background: url(../img/nuit-blanche-in-taipei.jpg) center #4d5d6c;
     padding: 2em;
     color: white;
-    height: 300px;
-    
+    height: 300px;  
 }
 
-.banner h1{
+#banner h1{
     position: absolute;
     top: 30%;
     left: 50%;
@@ -134,16 +144,29 @@ li{
         margin: 0 2em;
     }
 
-    nav ul,
-    .header-container{
+    
+    .header-container,
+    #main-nav,
+    .menu-list{
         display: flex;
     }
 
-    .dropdown-btn{
+    #main-nav{
+        background: none;
+        position: static;
+        width: auto;
+        height: auto;
+    }
+
+    .menu-list{
+        margin-top: auto;
+    }
+
+    #menu-btn{
         display: none;
     }
     
-    .dropdown-content li{
+    .menu-list li{
         padding: 0 1em;
     }
 
