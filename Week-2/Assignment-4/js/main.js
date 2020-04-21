@@ -25,8 +25,16 @@ menuBtn.addEventListener('click', (e) => {
 });
 
 showBtn.addEventListener('click', (e) => {
-    e.target.style.display = 'none';
-    for (let i = 0; i < hiddenItems.length; i++){
+    if (e.target.textContent === 'Show more') {
+        e.target.textContent = 'Show less';
+        for (let i = 0; i < hiddenItems.length; i++){
         hiddenItems[i].style.display = 'flex';
+        }
+    } else {
+        e.target.textContent = 'Show more';
+        for (let i = 0; i < hiddenItems.length; i++){
+        hiddenItems[i].style.display = 'none';
+        }
     }
+    
 });
