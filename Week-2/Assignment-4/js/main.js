@@ -2,6 +2,8 @@ const banner = document.getElementById('banner')
 const welcomeMessage = document.getElementById('welcome-message');
 const menuBtn = document.getElementById('menu-btn');
 const menuPannel = document.getElementById('main-nav');
+const showBtn = document.getElementById('show-btn');
+const hiddenItems = document.getElementsByClassName('hidden-item');
 
 banner.addEventListener('click', (e) => {
     if (welcomeMessage.textContent === 'Welcome to My Portfolio') {
@@ -19,5 +21,12 @@ menuBtn.addEventListener('click', (e) => {
     } else {
         menuPannel.style.display = null;
         menuBtn.textContent = 'menu';
+    }
+});
+
+showBtn.addEventListener('click', (e) => {
+    e.target.style.display = 'none';
+    for (let i = 0; i < hiddenItems.length; i++){
+        hiddenItems[i].style.display = 'flex';
     }
 });

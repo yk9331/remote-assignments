@@ -12,6 +12,17 @@ a{
     text-decoration: none;
 }
 
+.btn-reset{
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-reset:focus{
+    outline: none;
+}
+
 .wrapper{
     margin: 0 1em;
 }
@@ -34,18 +45,10 @@ header{
     right: 1em;
     display: block;
     margin-left: 1em;
-    padding: 0;
-    border: none;
-    background: none;
     width: 32px;
-    height: 32px;
-    cursor: pointer;
+    height: 32px; 
 }
 
-#menu-btn:focus{
-    outline: none;
-    border: 1px rgba(0,0,0,.5) solid;
-}
 
 
 #main-nav{
@@ -91,6 +94,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 1em;
 }
 
 .col{
@@ -101,6 +105,10 @@ header{
     position: relative;
     padding: 0.3em;
     height: auto;
+}
+
+.hidden-item{
+    display: none;
 }
 
 .item-title{
@@ -125,12 +133,13 @@ header{
     opacity: 1;
 }
 
-.back-btn{
-    margin: 1em;
+.btn{
+    margin: 1em 0.3em;
     padding: 1em;
-    background-color: #96a8b2;
-    border-radius: 0.5em;
-    border: none;
+    border: 1.5px black  solid ;
+    border-radius: 6px;
+    background: none;
+    font-size: 14px;
 }
 
 @media (min-width: 500px){
