@@ -1,7 +1,6 @@
 function avg(data) {
     // your code here 
-    let avg = data.products.reduce((acc, cur) => acc + cur.price, 0) / data.products.length;
-    return avg;
+    return data.products.reduce((acc, cur) => acc + cur.price, 0) / data.size;
 }
 
 
