@@ -5,17 +5,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sum the Integers from 1 to N</title>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="stylesheet/normalize.css">
         <link rel="stylesheet" href="stylesheet/style.css">   
+        
     </head>
     <body>
         <header>
             <h1>Sum the Integers from 1 to N</h1>
         </header>
         <main>
-            <input class="input" name="number" type="text" placeholder="Enter the Number of N">
-            <input class="button" type="submit">
+            <p>For Example: N=10</p>
+            <p id=example></p>
+            <div class="input-wrapper">
+                <input id="number" name="number" type="text" placeholder="Enter the Number of N" value="">
+                <button type="submit" onclick="sendNumber()">Send</button>
+            </div>
+            <p id="result"></p>
         </main>
-        <script></script>
+
+        <script>
+            let exampleXhr = new XMLHttpRequest();
+            exampleXhr.onreadystatechange = function(){
+                if(exampleXhr.readyState === 4){
+                    document.getElementById('example').innerHTML = exampleXhr.responseText;
+                }
+            }
+            exampleXhr.open('GET', '/getData?number=10', true);
+            exampleXhr.send();
+
+            function sendNumber(){
+                let xhr =new XMLHttpRequest();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState === 4){
+                        document.getElementById('result').innerHTML = xhr.responseText;
+                    }
+                };
+                let input = document.getElementById('number')
+                xhr.open('GET', '/getData?number=' + input.value , true);
+                xhr.send();
+                input.value = "";
+            }
+
+        </script>
     </body>
 </html>
