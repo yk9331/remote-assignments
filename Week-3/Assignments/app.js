@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const mainRoutes = require('./routes');
 
-
-app.get('/', (req, res) => res.send('<h1>Hello, My Server!</h1>'));
+app.use(mainRoutes);
 app.listen(port, () => console.log('The applicaiton is running on localhost:3000'));
