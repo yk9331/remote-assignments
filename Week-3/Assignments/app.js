@@ -1,7 +1,11 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
+
 const app = express();
 const port = 3000;
-app.use(express.static('public'))
+
+app.use(cookieParser());
+app.use(express.static('public'));
 
 const mainRoutes = require('./routes');
 app.use(mainRoutes);
