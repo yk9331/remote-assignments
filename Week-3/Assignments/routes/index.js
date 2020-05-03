@@ -17,9 +17,9 @@ router.get('/getData', (req, res) => {
             for (let i = 1; i <= int; i++){
                 sum += i;
                 if (i === int) {
-                    htmlString += i + '<br><strong>= ' + sum + '</strong>';
+                    htmlString += `${i}<br><strong>= ${sum} </strong>`;
                 } else {
-                    htmlString += i + ' + ';
+                    htmlString += `${i} + `;
                 }
             }
             res.send(`${htmlString}`);
