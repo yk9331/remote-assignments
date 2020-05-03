@@ -3,7 +3,7 @@
 function twoSum(nums, target) {
     for (let i = 0; i < nums.length - 1; i++){
         for (let j = i + 1; j < nums.length; j++){
-            if (nums[i]+ nums[j] === target) {
+            if ((nums[i] + nums[j]) === target) {
                 return [i, j];
             }
         }
@@ -30,9 +30,12 @@ function twoSumByHash(nums, target) {
     return false;
 }
 
-//console.log(twoSum([2, 7, 11, 15], 9));
-//console.log(twoSumByHash([2, 7, 11, 15], 9));
+//console.log(twoSum([2, 7, 11, 15, -4], 11));
+//console.log(twoSumByHash([2, 7, 11, 15, -4], 11));
 
+
+console.log(twoSum([-1, -5, -4, -7, 10], -9));
+console.log(twoSumByHash([-1, -5, -4, -7, 10], -9));
 
 /*
 For example:
@@ -69,14 +72,14 @@ function twoSumTest(testArr = null, length=0, target) {
     console.log("============================")
 }
 
-twoSumTest([2, 7, 11, 15], 0, [0, 1]);
-twoSumTest([2, 7, 11, 15], 0, [0, 2]);
-twoSumTest([2, 7, 11, 15], 0, [0, 3]);
+// twoSumTest([2, 7, 11, 15], 0, [0, 1]);
+// twoSumTest([2, 7, 11, 15], 0, [0, 2]);
+// twoSumTest([2, 7, 11, 15], 0, [0, 3]);
 
-twoSumTest([2, 7, 11, 15], 0, [1, 2]);
-twoSumTest([2, 7, 11, 15], 0, [1, 3]);
+// twoSumTest([2, 7, 11, 15], 0, [1, 2]);
+// twoSumTest([2, 7, 11, 15], 0, [1, 3]);
 
-twoSumTest([2, 7, 11, 15], 0, [2, 3]);
+// twoSumTest([2, 7, 11, 15], 0, [2, 3]);
 
 // twoSumTest(null, 3000, [0, 2999]);
 // twoSumTest(null, 3000, [2998, 2999]);
