@@ -9,9 +9,9 @@ router.get('/getData', (req, res) => {
         res.send('Lack of Parameter');
     } else {
         const int = parseInt(number);
-        if (isNaN(int)) {
-            res.send('Wrong Parameter');
-        } else {
+        if (isNaN(int) || int <= 0) {
+            res.send('Wrong Parameter: N should be Positive Integer.');
+        }else {
             let sum = 0;
             let htmlString = '';
             for (let i = 1; i <= int; i++){
