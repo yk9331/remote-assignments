@@ -15,9 +15,18 @@ db.connect((err) => {
 
 const app = express();
 const port = 3000;
+app.use(express.static('public'));
 
 app.get('/', (req,res) => {
     res.send('Get Root');
 });
+
+app.post('/signup', (req, res) => {
+    res.send('sign up');
+})
+
+app.post('/signin', (req, res) => {
+    res.send('sign in');
+})
 
 app.listen(port, () => console.log("The application is running on localhost:3000"));
