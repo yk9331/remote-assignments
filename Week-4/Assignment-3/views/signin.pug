@@ -1,0 +1,13 @@
+extends index
+block form
+    form#sign-in-form(action="/signin" method="post")
+        h2 Sign In
+        if message
+            div.error 
+                strong Error:
+                p #{message}
+        label Email:
+            input#sign-in-email(type='email',name='email', placeholder='example@mail.com', required)
+        label Password:
+            input#sign-in-password(type='password',name='password', placeholder="********", required, minlength='8', maxlength='20')
+        button(type='submit') Submit
