@@ -19,20 +19,19 @@
             <form id="sign-up-form" action="/signup" method="post">
                 <h2>Sign up</h2>
                 <label for="username">User Name:</label>
-                <input id="username" name="username" type="text" placeholder="Yen-Chen Kuo">
+                <input id="sign-up-username" name="username" type="text" placeholder="Yen-Chen Kuo" required minlength="4" maxlength="45">
                 <label for="email">E-mail:</label>
-                <input id="email" name="email" type="email" placeholder="example@mail.com">
+                <input id="sign-up-email" name="email" type="email" placeholder="example@mail.com" required>
                 <label for="password">Password:</label>
-                <input id="password" name="password" type="password" placeholder="********">
-                
+                <input id="sign-up-password" name="password" type="password" placeholder="********" required minlength="8" maxlength="20">
                 <button type="submit">Submit</button>
             </form>
             <form id="sign-in-form" action="/signin" method="post">
                 <h2>Sign in</h2>
                 <label for="email">E-mail:</label>
-                <input id="email" name="email" type="email" placeholder="example@email.com">
+                <input id="sign-in-email" name="email" type="email" placeholder="example@email.com" required>
                 <label for="password">Password:</label>
-                <input id="password" name="password" type="text" placeholder="********">
+                <input id="sign-in-password" name="password" type="text" placeholder="********" required minlength="8" maxlength="20">
                 <button type="submit">Submit</button>
             </form>
             <p id="error-message"><p>
