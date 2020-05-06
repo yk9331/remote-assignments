@@ -18,23 +18,24 @@
             <button onclick="showSignInForm()">Sign In</button>
             <form id="sign-up-form" action="/signup" method="post">
                 <h2>Sign up</h2>
-                <label>Username:</label>
+                <label for="username">User Name:</label>
                 <input id="username" name="username" type="text" placeholder="Yen-Chen Kuo">
-                <label>E-mail:</label>
+                <label for="email">E-mail:</label>
                 <input id="email" name="email" type="email" placeholder="example@mail.com">
-                <label>Password:</label>
+                <label for="password">Password:</label>
                 <input id="password" name="password" type="password" placeholder="********">
                 
                 <button type="submit">Submit</button>
             </form>
             <form id="sign-in-form" action="/signin" method="post">
                 <h2>Sign in</h2>
-                <label>E-mail:</label>
+                <label for="email">E-mail:</label>
                 <input id="email" name="email" type="email" placeholder="example@email.com">
-                <label>Password:</label>
+                <label for="password">Password:</label>
                 <input id="password" name="password" type="text" placeholder="********">
                 <button type="submit">Submit</button>
             </form>
+            <p id="error-message"><p>
         </main>
 
         <script src="javascript/app.js"></script>
