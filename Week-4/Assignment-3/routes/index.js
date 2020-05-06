@@ -73,12 +73,12 @@ router.post('/signin', async (req, res) => {
                 res.render('member', { username });
             } else {
                 const message = 'Wrong Password, please try again'
-                res.render('signin', { message });
+                res.render('signin', { message, email });
             }
         })
     } else {
         const message = `"${req.body.email}" not exist, please try to sign up.`
-        res.render('signup', { message });
+        res.render('signup', { message, email });
     }
 })
 

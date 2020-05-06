@@ -7,7 +7,7 @@ block form
                 strong Error:
                 p #{message}
         label Email:
-            input#sign-in-email(type='email',name='email', placeholder='example@mail.com', required)
+            input#sign-in-email(type='email',name='email', placeholder='example@mail.com', value=email, required)
         label Password:
             input#sign-in-password(type='password',name='password', placeholder="********", required, minlength='8', maxlength='20')
         button(type='submit') Submit
