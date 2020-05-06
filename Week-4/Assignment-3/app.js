@@ -57,7 +57,14 @@ app.post('/signup', async (req, res) => {
 })
 
 app.post('/signin', (req, res) => {
-    
+    let sql = `SELECT * FROM user WHERE email = "${req.body.email}" AND password = "${req.body.password}"`;
+    let query = db.query(sql, (err, result) => {
+        if (result.length == 1) {
+            res.redirect('member.html');
+        } else {
+            res.redirect('/');
+        }
+    })
 })
 
 app.listen(port, () => console.log("The application is running on localhost:3000"));
